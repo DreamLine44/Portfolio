@@ -11,7 +11,7 @@ export const experience = [
     title: "Currently Building",
     period: "Ongoing",
     description:
-      "Continuously building production-ready software while seeking a first professional software engineering role. Recent focus: multi-tenant WhatsApp commerce automation, REST API design, and MongoDB schema evolution across real-world projects.",
+      "I’m actively building production-ready web applications and secure APIs while pursuing a junior software engineering opportunity. My recent work focuses on full-stack JavaScript delivery, API design, and practical database-driven solutions for real-world product needs.",
   },
 ];
 
@@ -20,5 +20,5 @@ export const socials = {
   linkedin: "https://linkedin.com/in/baba-l-tarawally",
   email: "alhassantrawally1@gmail.com",
   phone: "+2203532423",
-  location: "The Gambia",
+  location: "Busumbala, West Coast Region",
 };

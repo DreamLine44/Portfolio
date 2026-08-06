@@ -11,8 +11,8 @@ const CONTACT_ITEMS = [
   { icon: FiMail, label: socials.email, href: `mailto:${socials.email}` },
   { icon: FiPhone, label: socials.phone, href: `tel:${socials.phone}` },
   { icon: FiMapPin, label: socials.location, href: null },
-  { icon: FiLinkedin, label: "linkedin.com/in/baba-l-tarawally", href: socials.linkedin },
-  { icon: FiGithub, label: "github.com/babaltarawally", href: socials.github },
+  { icon: FiLinkedin, label: "LinkedIn", href: socials.linkedin },
+  { icon: FiGithub, label: "GitHub", href: socials.github },
 ];
 
 const initialForm = { name: "", email: "", subject: "", message: "" };

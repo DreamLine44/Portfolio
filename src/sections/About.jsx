@@ -5,12 +5,12 @@ import SectionHeading from "../components/ui/SectionHeading";
 import Card from "../components/ui/Card";
 
 const POINTS = [
-  "I'm passionate about Full-Stack JavaScript development, from database schema to pixel-level UI.",
-  "I enjoy backend development with Node.js and Express — building APIs that are predictable and easy to extend.",
-  "I build modern, responsive user interfaces with React and Tailwind CSS.",
-  "I use AI tools like ChatGPT, GitHub Copilot, and Claude AI to move faster — while making sure I understand, test, and maintain every line I ship.",
-  "I enjoy building real-world applications that solve practical problems, not just tutorial clones.",
-  "I'm actively seeking my first professional software engineering opportunity.",
+  "I’m passionate about full-stack JavaScript development, from database modeling to polished, user-friendly interfaces.",
+  "I enjoy building backend systems with Node.js and Express, especially APIs that are structured, secure, and easy to extend.",
+  "I create modern, responsive frontends with React, Tailwind CSS, and thoughtful UI details that make products feel polished.",
+  "I use AI tools like ChatGPT, GitHub Copilot, and Claude to speed up development while still understanding, testing, and maintaining the code I ship.",
+  "I focus on building practical products that solve real problems, not just tutorial-style demos.",
+  "I’m actively seeking a professional software engineering opportunity where I can contribute, learn fast, and grow with a strong team.",
 ];
 
 const STACK_ICONS = [

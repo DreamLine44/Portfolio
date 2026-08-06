@@ -81,8 +81,8 @@ export default function Hero() {
 
           <p className="mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-slate-300">
             I build modern, scalable web applications with React, Node.js,
-            Express and MongoDB — and I enjoy turning real-world problems
-            into production-ready software.
+            Express, and MongoDB/PostgreSQL — focusing on clean APIs,
+            responsive UI, and production-ready solutions that solve real-world problems.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
