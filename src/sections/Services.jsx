@@ -19,8 +19,8 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="// services"
-          title="What I Can Build"
-          description="From database design to deployment — I work across the full stack."
+          title="What I Build"
+          description="From database design to deployment — I deliver maintainable, tested, performant systems."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

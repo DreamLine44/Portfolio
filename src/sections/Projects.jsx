@@ -11,8 +11,8 @@ export default function Projects() {
 
         <SectionHeading
           eyebrow="// more work"
-          title="Other Projects"
-          description="Smaller builds focused on solving one problem cleanly."
+          title="More Projects"
+          description="Compact, focused builds that solve specific problems with clean interfaces and reliable delivery."
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

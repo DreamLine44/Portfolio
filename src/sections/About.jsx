@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
-import { FiCheckCircle } from "react-icons/fi";
 import { SiReact, SiNodedotjs, SiExpress, SiMongodb, SiJavascript, SiTypescript, SiTailwindcss, SiGithub } from "react-icons/si";
 import SectionHeading from "../components/ui/SectionHeading";
 import Card from "../components/ui/Card";
-
-const POINTS = [
-  "I’m passionate about full-stack JavaScript development, from database modeling to polished, user-friendly interfaces.",
-  "I enjoy building backend systems with Node.js and Express, especially APIs that are structured, secure, and easy to extend.",
-  "I create modern, responsive frontends with React, Tailwind CSS, and thoughtful UI details that make products feel polished.",
-  "I use AI tools like ChatGPT, GitHub Copilot, and Claude to speed up development while still understanding, testing, and maintaining the code I ship.",
-  "I focus on building practical products that solve real problems, not just tutorial-style demos.",
-  "I’m actively seeking a professional software engineering opportunity where I can contribute, learn fast, and grow with a strong team.",
-];
 
 const STACK_ICONS = [
   { Icon: SiReact, label: "React", color: "#61DAFB" },
@@ -31,26 +21,44 @@ export default function About() {
         <SectionHeading
           eyebrow="// about"
           title="About Me"
-          description="The short version: I write backend logic and interfaces that people can actually rely on."
+          description="I build modern, scalable web applications and AI-powered automations that solve real business problems."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <motion.ul
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="space-y-4"
+            className="space-y-5 text-[var(--color-text-secondary)]"
           >
-            {POINTS.map((point, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <FiCheckCircle className="mt-1 shrink-0 text-[var(--color-success)]" size={18} />
-                <span className="text-[var(--color-text-secondary)] leading-relaxed">
-                  {point}
-                </span>
-              </li>
-            ))}
-          </motion.ul>
+            <p>
+              Hi — I&apos;m Alhassan Trawally, a Full-Stack JavaScript Developer and AI
+              Automation Engineer. I create production-ready applications and
+              intelligent automation solutions that help businesses work smarter.
+            </p>
+
+            <p>
+              My expertise covers the full JavaScript ecosystem: frontend
+              interfaces with React and Tailwind CSS, backend services with Node.js
+              and Express, and databases such as MongoDB and PostgreSQL. I design
+              secure APIs, implement authentication, and deploy reliable systems
+              to the cloud.
+            </p>
+
+            <p>
+              I specialize in AI-driven business automations — for example,
+              intelligent WhatsApp platforms that automate customer support,
+              ordering, bookings, lead management, and sales using natural
+              language understanding and workflow automation.
+            </p>
+
+            <p>
+              I focus on writing clean, maintainable, and scalable code, and I
+              continually refine my skills to deliver solutions that provide
+              measurable value.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -60,8 +68,9 @@ export default function About() {
           >
             <Card className="p-6 sm:p-8">
               <h3 className="font-[var(--font-display)] text-lg font-bold text-[var(--color-navy)] dark:text-white">
-                Core Stack
+                Core Skills & Technologies
               </h3>
+
               <div className="mt-5 grid grid-cols-4 gap-4">
                 {STACK_ICONS.map(({ Icon, label, color }) => (
                   <div
@@ -75,21 +84,10 @@ export default function About() {
                   </div>
                 ))}
               </div>
+
               <div className="mt-6 rounded-xl bg-[var(--color-bg-secondary)] p-4 font-mono text-xs text-[var(--color-text-secondary)]">
-                <span className="text-[var(--color-accent-purple)]">const</span>{" "}
-                <span className="text-[var(--color-primary)]">developer</span> = {"{"}
-                <br />
-                &nbsp;&nbsp;focus:{" "}
-                <span className="text-[var(--color-success)]">
-                  &apos;full-stack JS&apos;
-                </span>
-                ,<br />
-                &nbsp;&nbsp;status:{" "}
-                <span className="text-[var(--color-success)]">
-                  &apos;open to work&apos;
-                </span>
-                <br />
-                {"}"};
+                <strong>Specialties:</strong> AI automations, API design,
+                authentication, cloud deployment, and production performance.
               </div>
             </Card>
           </motion.div>

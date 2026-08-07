@@ -5,6 +5,7 @@ export default function SectionHeading({
   title,
   description,
   align = "left",
+  className = "",
 }) {
   return (
     <motion.div
@@ -12,7 +13,7 @@ export default function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.5 }}
-      className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}
+      className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""} ${className}`}
     >
       {eyebrow && (
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] font-mono tracking-wide">

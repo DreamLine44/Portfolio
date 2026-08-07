@@ -76,13 +76,13 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 font-mono text-lg text-[var(--color-secondary-blue)]">
-            Full-Stack <span className="text-white">JavaScript</span> Developer
+            Full-Stack JavaScript Developer — React, Node & APIs
           </p>
 
           <p className="mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-slate-300">
-            I build modern, scalable web applications with React, Node.js,
-            Express, and MongoDB/PostgreSQL — focusing on clean APIs,
-            responsive UI, and production-ready solutions that solve real-world problems.
+            I build modern, scalable web applications using React, Node.js,
+            Express, and MongoDB/PostgreSQL. I focus on clean APIs, responsive
+            interfaces, and production-ready solutions that solve real problems.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -96,7 +96,7 @@ export default function Hero() {
               variant="primary"
               icon={<FiArrowRight />}
             >
-              View My Work
+              See My Work
             </Button>
             <Button
               as="a"

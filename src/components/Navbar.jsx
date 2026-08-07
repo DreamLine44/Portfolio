@@ -28,8 +28,8 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 z-50 w-full">
-      <nav className="bg-glass border-b border-[var(--color-border)]/70">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 py-3.5">
+      <nav className="bg-glass/95 border-b border-[var(--color-border)]/70 backdrop-blur-xl shadow-sm shadow-slate-900/10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 py-4">
           <a
             href="#home"
             onClick={(e) => {
@@ -50,7 +50,7 @@ export default function Navbar() {
                   className={`focus-ring relative px-3.5 py-2 text-sm font-medium rounded-lg transition-colors ${
                     activeId === link.id
                       ? "text-[var(--color-primary)]"
-                      : "text-[var(--color-text-secondary)] hover:text-[var(--color-navy)] dark:hover:text-white"
+                      : "text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] dark:hover:text-white"
                   }`}
                 >
                   {link.label}
@@ -69,7 +69,7 @@ export default function Navbar() {
             <button
               aria-label="Toggle dark mode"
               onClick={toggleTheme}
-              className="focus-ring grid h-10 w-10 place-items-center rounded-xl border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
+              className="focus-ring grid h-11 w-11 place-items-center rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
             >
               {theme === "dark" ? <FiSun size={17} /> : <FiMoon size={17} />}
             </button>
