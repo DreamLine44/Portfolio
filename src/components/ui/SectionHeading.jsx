@@ -16,7 +16,7 @@ export default function SectionHeading({
       className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""} ${className}`}
     >
       {eyebrow && (
-        <span className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] font-mono tracking-wide">
+        <span className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] font-mono tracking-wide uppercase">
           {eyebrow}
         </span>
       )}

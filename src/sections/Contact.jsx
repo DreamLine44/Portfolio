@@ -33,6 +33,11 @@ export default function Contact() {
     if (!/^\S+@\S+\.\S+$/.test(form.email)) next.email = "Enter a valid email";
     if (!form.message.trim()) next.message = "Message can't be empty";
     setErrors(next);
+    if (Object.keys(next).length > 0) {
+      const first = Object.keys(next)[0];
+      const el = document.getElementsByName(first)[0];
+      el?.focus();
+    }
     return Object.keys(next).length === 0;
   };
 
@@ -48,11 +53,16 @@ export default function Contact() {
       setSubmitMessage("Thanks — your message was sent successfully.");
       setForm(initialForm);
     } catch (error) {
+      const msg = error?.message || "Something went wrong. Please email me directly instead.";
       setStatus("error");
-      setSubmitMessage(
-        error?.message ||
-          "Something went wrong. Please email me directly instead."
-      );
+      setSubmitMessage(msg);
+
+      // If contact API isn't configured, open mail client with prefilled message
+      if (msg.includes("Contact API is not configured")) {
+        const mailto = `mailto:${socials.email}?subject=${encodeURIComponent(form.subject || 'Contact from portfolio')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+        // small delay so user sees the message before mail client opens
+        setTimeout(() => (window.location.href = mailto), 700);
+      }
     }
   };
 
@@ -107,7 +117,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Card hover={false} className="p-6 sm:p-8">
-              <form onSubmit={handleSubmit} noValidate className="space-y-5">
+              <form onSubmit={handleSubmit} noValidate className="space-y-5" aria-live="polite" role="status">
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <Field
                     label="Your Name"
@@ -115,6 +125,7 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     error={errors.name}
+                    disabled={status === 'loading' || status === 'success'}
                   />
                   <Field
                     label="Your Email"
@@ -123,6 +134,7 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     error={errors.email}
+                    disabled={status === 'loading' || status === 'success'}
                   />
                 </div>
                 <Field
@@ -130,6 +142,7 @@ export default function Contact() {
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
+                  disabled={status === 'loading' || status === 'success'}
                 />
                 <Field
                   label="Your Message"
@@ -139,6 +152,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange}
                   error={errors.message}
+                  disabled={status === 'loading' || status === 'success'}
                 />
 
                 <Button
